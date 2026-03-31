@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Statifly</title>
+    <meta name="description" content="Privacy Policy for the Statifly Android app by HFB Studioz. Learn how your data is handled — spoiler: it stays on your device.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0b0f1a;
+            --surface: #131828;
+            --surface-alt: #1a2036;
+            --border: rgba(255, 255, 255, 0.06);
+            --text: #e2e8f0;
+            --text-muted: #8b95a8;
+            --text-dim: #5a6478;
+            --heading: #f8fafc;
+            --accent: #6c5ce7;
+            --accent-soft: rgba(108, 92, 231, 0.12);
+            --green: #00cec9;
+            --green-soft: rgba(0, 206, 201, 0.1);
+            --red: #ff6b6b;
+            --red-soft: rgba(255, 107, 107, 0.1);
+            --amber: #fdcb6e;
+            --amber-soft: rgba(253, 203, 110, 0.1);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── Hero ────────────────────────────────────── */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 72px 24px 56px;
+            text-align: center;
+            background: linear-gradient(170deg, #1a1040 0%, var(--bg) 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(108, 92, 231, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 100px;
+            background: var(--accent-soft);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            color: #a29bfe;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 800;
+            color: var(--heading);
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 480px;
+            margin: 0 auto 8px;
+        }
+
+        .hero-updated {
+            color: var(--text-dim);
+            font-size: 13px;
+        }
+
+        /* ── Layout ──────────────────────────────────── */
+
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        /* ── TOC ─────────────────────────────────────── */
+
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin: -28px 0 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .toc h2 {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-dim);
+            margin-bottom: 16px;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: toc;
+            columns: 2;
+            column-gap: 24px;
+        }
+
+        .toc li {
+            counter-increment: toc;
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+
+        .toc a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .toc a::before {
+            content: counter(toc, decimal-leading-zero);
+            color: var(--text-dim);
+            font-size: 11px;
+            font-weight: 600;
+            min-width: 18px;
+        }
+
+        .toc a:hover {
+            color: var(--accent);
+        }
+
+        /* ── Sections ────────────────────────────────── */
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        section > h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--heading);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        section > h2 .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: var(--accent-soft);
+            color: #a29bfe;
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--heading);
+            margin: 28px 0 12px;
+        }
+
+        p {
+            margin-bottom: 14px;
+        }
+
+        a {
+            color: #a29bfe;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            color: var(--heading);
+            font-weight: 600;
+        }
+
+        /* ── Callouts ────────────────────────────────── */
+
+        .callout {
+            display: flex;
+            gap: 14px;
+            padding: 18px 20px;
+            border-radius: var(--radius-sm);
+            margin: 20px 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .callout-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .callout.green {
+            background: var(--green-soft);
+            border: 1px solid rgba(0, 206, 201, 0.15);
+            color: #81ecec;
+        }
+
+        .callout.amber {
+            background: var(--amber-soft);
+            border: 1px solid rgba(253, 203, 110, 0.15);
+            color: #ffeaa7;
+        }
+
+        .callout.red {
+            background: var(--red-soft);
+            border: 1px solid rgba(255, 107, 107, 0.15);
+            color: #fab1a0;
+        }
+
+        /* ── Tables ───────────────────────────────────── */
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 20px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead th {
+            background: var(--surface-alt);
+            color: var(--text-muted);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 12px 16px;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        tbody td {
+            padding: 14px 16px;
+            border-top: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        tbody tr:hover {
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        td:first-child {
+            color: var(--heading);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        code {
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 2px 7px;
+            border-radius: 5px;
+            color: #a29bfe;
+        }
+
+        /* ── No-list ─────────────────────────────────── */
+
+        .no-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .no-list li {
+            padding: 6px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .no-list .icon {
+            flex-shrink: 0;
+            font-size: 15px;
+        }
+
+        /* ── Bullet list ─────────────────────────────── */
+
+        ul.bullets {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+
+        ul.bullets li {
+            position: relative;
+            padding: 6px 0 6px 24px;
+        }
+
+        ul.bullets li::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        /* ── Numbered items ──────────────────────────── */
+
+        .share-list {
+            list-style: none;
+            counter-reset: share;
+            padding: 0;
+            margin: 12px 0;
+        }
+
+        .share-list li {
+            counter-increment: share;
+            padding: 10px 0 10px 36px;
+            position: relative;
+        }
+
+        .share-list li::before {
+            content: counter(share);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 24px;
+            height: 24px;
+            border-radius: 8px;
+            background: var(--accent-soft);
+            color: #a29bfe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* ── Footer ──────────────────────────────────── */
+
+        .footer {
+            text-align: center;
+            padding: 32px 24px 48px;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: var(--text-muted);
+        }
+
+        .contact-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .contact-card .email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 100px;
+            background: var(--accent-soft);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            color: #a29bfe;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 12px;
+            transition: background 0.2s, transform 0.15s;
+            text-decoration: none;
+        }
+
+        .contact-card .email:hover {
+            background: rgba(108, 92, 231, 0.2);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        /* ── Responsive ──────────────────────────────── */
+
+        @media (max-width: 600px) {
+            .toc ol {
+                columns: 1;
+            }
+            .hero {
+                padding: 56px 20px 44px;
+            }
+            .toc, .contact-card {
+                padding: 20px;
+            }
+            td:first-child {
+                white-space: normal;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Hero ────────────────────────────────────────── -->
+    <header class="hero">
+        <div class="hero-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg>
+            Privacy Policy
+        </div>
+        <h1>Statifly</h1>
+        <p>Your data stays on your device. No tracking, no ads, no cloud.</p>
+        <p class="hero-updated">Last updated — March 31, 2026</p>
+    </header>
+
+    <!-- ── Content ─────────────────────────────────────── -->
+    <main class="container">
+
+        <!-- TOC -->
+        <nav class="toc">
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#what-statifly-does">What Statifly Does</a></li>
+                <li><a href="#permissions">Permissions We Request</a></li>
+                <li><a href="#data-collection">Data Collection & Usage</a></li>
+                <li><a href="#third-party">Third-Party Services</a></li>
+                <li><a href="#data-sharing">Data Sharing</a></li>
+                <li><a href="#data-retention">Data Retention & Deletion</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#children">Children's Privacy</a></li>
+                <li><a href="#changes">Changes to This Policy</a></li>
+                <li><a href="#your-rights">Your Rights</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ol>
+        </nav>
+
+        <!-- 1. Introduction -->
+        <section id="introduction">
+            <h2><span class="num">01</span> Introduction</h2>
+            <p>HFB Studioz ("we", "us", or "our") built <strong>Statifly</strong> as a free Android application. This Privacy Policy explains what information the app accesses, how it is used, and how it is stored. By using Statifly, you agree to the practices described in this policy.</p>
+            <div class="callout green">
+                <span class="callout-icon">🛡️</span>
+                <span>We are committed to protecting your privacy. <strong>Statifly does not collect, transmit, or share any personal data with us or any third party.</strong></span>
+            </div>
+        </section>
+
+        <!-- 2. What Statifly Does -->
+        <section id="what-statifly-does">
+            <h2><span class="num">02</span> What Statifly Does</h2>
+            <p>Statifly is an offline utility application that lets you:</p>
+            <ul class="bullets">
+                <li><strong>View & Save</strong> WhatsApp and WhatsApp Business status updates (images and videos) to your device.</li>
+                <li><strong>Organise</strong> saved statuses into Vault folders for easy access.</li>
+                <li><strong>Create</strong> custom status images with text, stickers, and backgrounds.</li>
+                <li><strong>Backup & Restore</strong> your saved, cached, and created statuses as encrypted archives to your device's Downloads folder.</li>
+                <li><strong>Share</strong> statuses with other apps installed on your device.</li>
+            </ul>
+        </section>
+
+        <!-- 3. Permissions -->
+        <section id="permissions">
+            <h2><span class="num">03</span> Permissions We Request</h2>
+            <p>Statifly requests the following Android permissions. Each is required solely for the app's core functionality:</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Permission</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Storage Access Framework (SAF)</td>
+                            <td>To read WhatsApp / WhatsApp Business status files from their <code>.Statuses</code> folder. Granted manually via the system folder picker; revocable at any time.</td>
+                        </tr>
+                        <tr>
+                            <td><code>READ_EXTERNAL_STORAGE</code></td>
+                            <td>Legacy read access for Android 12 and below to access media files.</td>
+                        </tr>
+                        <tr>
+                            <td><code>WRITE_EXTERNAL_STORAGE</code></td>
+                            <td>Legacy write access for Android 10 and below to save backup archives.</td>
+                        </tr>
+                        <tr>
+                            <td><code>READ_MEDIA_VISUAL_USER_SELECTED</code></td>
+                            <td>Access user-selected photos and videos on Android 14+.</td>
+                        </tr>
+                        <tr>
+                            <td><code>FOREGROUND_SERVICE</code></td>
+                            <td>Run background status fetching and backup operations reliably with a visible notification.</td>
+                        </tr>
+                        <tr>
+                            <td><code>POST_NOTIFICATIONS</code></td>
+                            <td>Show notifications about fetch progress and backup completion (Android 13+). Optional — can be denied.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="callout green">
+                <span class="callout-icon">✅</span>
+                <span>Statifly does <strong>NOT</strong> request Internet, Camera, Microphone, Location, Contacts, or any other sensitive permission.</span>
+            </div>
+        </section>
+
+        <!-- 4. Data Collection & Usage -->
+        <section id="data-collection">
+            <h2><span class="num">04</span> Data Collection & Usage</h2>
+
+            <h3>4.1 — We Do NOT Collect Personal Data</h3>
+            <p>Statifly operates <strong>entirely offline</strong>. We do not:</p>
+            <ul class="no-list">
+                <li><span class="icon">❌</span> Collect, store, or transmit any personal information.</li>
+                <li><span class="icon">❌</span> Use analytics, tracking, or telemetry services.</li>
+                <li><span class="icon">❌</span> Display advertisements or include ad SDKs.</li>
+                <li><span class="icon">❌</span> Send any data to remote servers.</li>
+            </ul>
+
+            <h3>4.2 — Data Stored Locally on Your Device</h3>
+            <p>All data created or managed by Statifly is stored <strong>locally on your device</strong>:</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Storage Location</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cached statuses</td>
+                            <td>App cache directory</td>
+                            <td>Temporary copies of WhatsApp statuses for viewing. Automatically cleaned up.</td>
+                        </tr>
+                        <tr>
+                            <td>Saved statuses</td>
+                            <td>App internal storage</td>
+                            <td>Permanently saved statuses you chose to keep.</td>
+                        </tr>
+                        <tr>
+                            <td>Created statuses</td>
+                            <td>App internal storage</td>
+                            <td>Custom statuses you created using the status creator.</td>
+                        </tr>
+                        <tr>
+                            <td>App preferences</td>
+                            <td>Android DataStore</td>
+                            <td>Theme, onboarding state, folder access URIs, vault view mode.</td>
+                        </tr>
+                        <tr>
+                            <td>Database</td>
+                            <td>Room database</td>
+                            <td>Vault folder structure, saved & created status metadata.</td>
+                        </tr>
+                        <tr>
+                            <td>Backup archives</td>
+                            <td>Downloads / Statifly</td>
+                            <td>Encrypted backup files you explicitly create.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>4.3 — Backup & Restore</h3>
+            <p>When you create a backup:</p>
+            <ul class="bullets">
+                <li>Your statuses are compressed and <strong>encrypted</strong> using a device-bound encryption key.</li>
+                <li>The archive is saved to your device's Downloads folder. We have no access to it.</li>
+                <li>You control when backups are created, restored, or deleted.</li>
+            </ul>
+
+            <h3>4.4 — Feedback & Bug Reports</h3>
+            <p>The in-app feedback screen lets you send bug reports <strong>via your own email app</strong>. If you choose to submit feedback:</p>
+            <ul class="bullets">
+                <li>Non-personal device information (device model, Android version, screen resolution, RAM, battery level, app version, locale, font scale, dark mode) is included in the email body to help diagnose issues.</li>
+                <li>This information is <strong>only sent if you voluntarily submit the email</strong>. It is never collected automatically.</li>
+                <li>We only use the information you provide to address your reported issue.</li>
+            </ul>
+        </section>
+
+        <!-- 5. Third-Party Services -->
+        <section id="third-party">
+            <h2><span class="num">05</span> Third-Party Services</h2>
+            <p>Statifly does <strong>not</strong> integrate any third-party services that collect data:</p>
+            <ul class="no-list">
+                <li><span class="icon">❌</span> No analytics or crash reporting SDKs</li>
+                <li><span class="icon">❌</span> No advertising networks</li>
+                <li><span class="icon">❌</span> No social login or authentication services</li>
+                <li><span class="icon">❌</span> No cloud storage services</li>
+                <li><span class="icon">❌</span> No third-party trackers</li>
+            </ul>
+            <p>Open-source libraries (Jetpack Compose, Room, Hilt, Coil, Media3, WorkManager, DataStore) are used solely for on-device functionality and do not transmit data externally.</p>
+        </section>
+
+        <!-- 6. Data Sharing -->
+        <section id="data-sharing">
+            <h2><span class="num">06</span> Data Sharing</h2>
+            <p>We do <strong>not</strong> sell, trade, or share your data with any third parties. The only scenarios where data leaves the app are initiated and controlled by you:</p>
+            <ol class="share-list">
+                <li><strong>Sharing a status</strong> — you explicitly share an image or video with another app via Android's share sheet.</li>
+                <li><strong>Sending feedback</strong> — you voluntarily compose and send an email through your email client.</li>
+                <li><strong>Creating a backup</strong> — the encrypted backup file is saved to your Downloads folder, under your control.</li>
+            </ol>
+        </section>
+
+        <!-- 7. Data Retention & Deletion -->
+        <section id="data-retention">
+            <h2><span class="num">07</span> Data Retention & Deletion</h2>
+            <ul class="bullets">
+                <li><strong>Cached statuses</strong> are automatically cleaned up after they expire (matching WhatsApp's 24-hour lifecycle).</li>
+                <li><strong>Saved statuses, created statuses, and vault folders</strong> persist until you manually delete them within the app.</li>
+                <li><strong>Backups</strong> persist in your Downloads folder until you delete them through the app or your file manager.</li>
+                <li><strong>All app data</strong> (cache, internal storage, database, preferences) is permanently deleted when you uninstall Statifly.</li>
+            </ul>
+        </section>
+
+        <!-- 8. Security -->
+        <section id="security">
+            <h2><span class="num">08</span> Security</h2>
+            <ul class="bullets">
+                <li>Backup archives are encrypted using <strong>AES encryption</strong> with device-bound keys before being saved to external storage.</li>
+                <li>All status files, database entries, and preferences are stored in the app's private internal storage, <strong>sandboxed by Android</strong> and inaccessible to other apps.</li>
+                <li>Statifly does not use the Internet permission and <strong>cannot transmit data off your device</strong>.</li>
+            </ul>
+        </section>
+
+        <!-- 9. Children's Privacy -->
+        <section id="children">
+            <h2><span class="num">09</span> Children's Privacy</h2>
+            <p>Statifly does not knowingly collect personal information from children under the age of 13. The app does not collect personal information from any user. If you are a parent or guardian and believe your child has provided personal information through the feedback feature, please contact us and we will promptly remove it.</p>
+        </section>
+
+        <!-- 10. Changes -->
+        <section id="changes">
+            <h2><span class="num">10</span> Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last Updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+        </section>
+
+        <!-- 11. Your Rights -->
+        <section id="your-rights">
+            <h2><span class="num">11</span> Your Rights</h2>
+            <p>Since Statifly does not collect or store any personal data on our servers, there is no personal data for us to access, modify, or delete. All data is stored locally on your device and fully under your control. You can:</p>
+            <ul class="bullets">
+                <li>Revoke storage access permissions at any time through Android Settings.</li>
+                <li>Delete any saved statuses, created statuses, or vault folders within the app.</li>
+                <li>Delete all app data by clearing the app's storage or uninstalling it.</li>
+            </ul>
+        </section>
+
+        <!-- 12. Contact -->
+        <section id="contact">
+            <h2><span class="num">12</span> Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the app, please reach out:</p>
+            <div class="contact-card">
+                <p style="color: var(--text-muted); margin-bottom: 4px; font-size: 13px;">Developer — HFB Studioz</p>
+                <a href="mailto:hfbstudioz@gmail.com" class="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    hfbstudioz@gmail.com
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>This privacy policy applies to the <strong>Statifly</strong> app available on Google Play.</p>
+        <p style="margin-top: 6px;">© 2026 HFB Studioz. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
