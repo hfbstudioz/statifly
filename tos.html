@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Statifly</title>
+    <meta name="description" content="Terms of Service for the Statifly Android app by HFB Studioz. Understand your rights and responsibilities when using the app.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        :root{--bg:#0b0f1a;--surface:#131828;--surface-alt:#1a2036;--border:rgba(255,255,255,0.06);--text:#e2e8f0;--text-muted:#8b95a8;--text-dim:#5a6478;--heading:#f8fafc;--accent:#6c5ce7;--accent-soft:rgba(108,92,231,0.12);--green:#00cec9;--green-soft:rgba(0,206,201,0.1);--red:#ff6b6b;--red-soft:rgba(255,107,107,0.1);--amber:#fdcb6e;--amber-soft:rgba(253,203,110,0.1);--radius:16px;--radius-sm:10px}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+        .hero{position:relative;overflow:hidden;padding:72px 24px 56px;text-align:center;background:linear-gradient(170deg,#1a1040 0%,var(--bg) 70%)}
+        .hero::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(108,92,231,0.15) 0%,transparent 70%);pointer-events:none}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;background:var(--accent-soft);border:1px solid rgba(108,92,231,0.2);color:#a29bfe;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:24px}
+        .hero-badge svg{width:14px;height:14px;fill:currentColor}
+        .hero h1{font-size:clamp(28px,5vw,42px);font-weight:800;color:var(--heading);letter-spacing:-.5px;margin-bottom:12px}
+        .hero p{color:var(--text-muted);font-size:16px;max-width:480px;margin:0 auto 8px}
+        .hero-updated{color:var(--text-dim);font-size:13px}
+        .container{max-width:740px;margin:0 auto;padding:0 24px 80px}
+        .toc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;margin:-28px 0 48px;position:relative;z-index:1}
+        .toc h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-dim);margin-bottom:16px}
+        .toc ol{list-style:none;counter-reset:toc;columns:2;column-gap:24px}
+        .toc li{counter-increment:toc;margin-bottom:8px;break-inside:avoid}
+        .toc a{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s;display:flex;align-items:baseline;gap:8px}
+        .toc a::before{content:counter(toc,decimal-leading-zero);color:var(--text-dim);font-size:11px;font-weight:600;min-width:18px}
+        .toc a:hover{color:var(--accent)}
+        section{margin-bottom:48px}
+        section>h2{font-size:22px;font-weight:700;color:var(--heading);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}
+        section>h2 .num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:10px;background:var(--accent-soft);color:#a29bfe;font-size:13px;font-weight:700;flex-shrink:0}
+        h3{font-size:16px;font-weight:600;color:var(--heading);margin:28px 0 12px}
+        p{margin-bottom:14px}
+        a{color:#a29bfe;text-decoration:none}
+        a:hover{text-decoration:underline}
+        strong{color:var(--heading);font-weight:600}
+        .callout{display:flex;gap:14px;padding:18px 20px;border-radius:var(--radius-sm);margin:20px 0;font-size:14px;line-height:1.6}
+        .callout-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+        .callout.green{background:var(--green-soft);border:1px solid rgba(0,206,201,0.15);color:#81ecec}
+        .callout.amber{background:var(--amber-soft);border:1px solid rgba(253,203,110,0.15);color:#ffeaa7}
+        .callout.red{background:var(--red-soft);border:1px solid rgba(255,107,107,0.15);color:#fab1a0}
+        ul.bullets{list-style:none;padding:0;margin:12px 0}
+        ul.bullets li{position:relative;padding:6px 0 6px 24px}
+        ul.bullets li::before{content:'';position:absolute;left:6px;top:14px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+        .no-list{list-style:none;padding:0}
+        .no-list li{padding:6px 0;display:flex;align-items:baseline;gap:10px;font-size:14px}
+        .no-list .icon{flex-shrink:0;font-size:15px}
+        .share-list{list-style:none;counter-reset:share;padding:0;margin:12px 0}
+        .share-list li{counter-increment:share;padding:10px 0 10px 36px;position:relative}
+        .share-list li::before{content:counter(share);position:absolute;left:0;top:10px;width:24px;height:24px;border-radius:8px;background:var(--accent-soft);color:#a29bfe;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+        .footer{text-align:center;padding:32px 24px 48px;border-top:1px solid var(--border);color:var(--text-dim);font-size:13px}
+        .footer a{color:var(--text-muted)}
+        .contact-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;text-align:center;margin-top:8px}
+        .contact-card .email{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:100px;background:var(--accent-soft);border:1px solid rgba(108,92,231,0.2);color:#a29bfe;font-weight:600;font-size:15px;margin-top:12px;transition:background .2s,transform .15s;text-decoration:none}
+        .contact-card .email:hover{background:rgba(108,92,231,0.2);transform:translateY(-1px);text-decoration:none}
+        @media(max-width:600px){.toc ol{columns:1}.hero{padding:56px 20px 44px}.toc,.contact-card{padding:20px}}
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>
+            Terms of Service
+        </div>
+        <h1>Statifly</h1>
+        <p>Please read these terms carefully before using the app.</p>
+        <p class="hero-updated">Last updated — April 26, 2026</p>
+    </header>
+
+    <main class="container">
+
+        <nav class="toc">
+            <h2>Contents</h2>
+            <ol>
+                <li><a href="#acceptance">Acceptance of Terms</a></li>
+                <li><a href="#description">App Description</a></li>
+                <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="#license">License &amp; Usage</a></li>
+                <li><a href="#user-content">User Content</a></li>
+                <li><a href="#prohibited">Prohibited Uses</a></li>
+                <li><a href="#whatsapp">WhatsApp Content</a></li>
+                <li><a href="#third-party">Third-Party Services</a></li>
+                <li><a href="#intellectual-property">Intellectual Property</a></li>
+                <li><a href="#disclaimers">Disclaimers</a></li>
+                <li><a href="#limitation">Limitation of Liability</a></li>
+                <li><a href="#termination">Termination</a></li>
+                <li><a href="#changes">Changes to Terms</a></li>
+                <li><a href="#governing-law">Governing Law</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ol>
+        </nav>
+
+        <!-- 1 -->
+        <section id="acceptance">
+            <h2><span class="num">01</span> Acceptance of Terms</h2>
+            <p>By downloading, installing, or using <strong>Statifly</strong> ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+            <p>These Terms constitute a legally binding agreement between you ("User", "you") and <strong>HFB Studioz</strong> ("we", "us", "our"), the developer of Statifly.</p>
+            <div class="callout amber">
+                <span class="callout-icon">📋</span>
+                <span>These Terms should be read in conjunction with our <a href="privacy-policy.html">Privacy Policy</a>, which explains how we handle data and analytics.</span>
+            </div>
+        </section>
+
+        <!-- 2 -->
+        <section id="description">
+            <h2><span class="num">02</span> App Description</h2>
+            <p>Statifly is a free Android utility application that provides the following features:</p>
+            <ul class="bullets">
+                <li><strong>Status Saver</strong> — View and save WhatsApp &amp; WhatsApp Business status updates (images and videos) to your device.</li>
+                <li><strong>Vault</strong> — Organise saved statuses into folders with search functionality.</li>
+                <li><strong>Creator</strong> — Create custom status images with text, stickers, backgrounds, and camera capture.</li>
+                <li><strong>Elevate</strong> — Create product showcase reels from your gallery images with customisable templates.</li>
+                <li><strong>Share Import</strong> — Receive images, videos, and links shared from other apps, with link preview resolution and save-to-vault functionality.</li>
+                <li><strong>Backup &amp; Restore</strong> — Create encrypted backup archives of your statuses and restore them on the same device.</li>
+                <li><strong>Storage Manager</strong> — Monitor and manage the app's disk usage across cache, saved, and created statuses.</li>
+            </ul>
+        </section>
+
+        <!-- 3 -->
+        <section id="eligibility">
+            <h2><span class="num">03</span> Eligibility</h2>
+            <p>You must be at least <strong>13 years of age</strong> to use Statifly. By using the App, you represent that you meet this age requirement. If you are under 18, you should review these Terms with a parent or guardian.</p>
+        </section>
+
+        <!-- 4 -->
+        <section id="license">
+            <h2><span class="num">04</span> License &amp; Usage</h2>
+            <h3>4.1 — Grant of License</h3>
+            <p>We grant you a limited, non-exclusive, non-transferable, revocable licence to download and use Statifly on your personal Android device(s), strictly in accordance with these Terms.</p>
+
+            <h3>4.2 — Restrictions</h3>
+            <p>You agree <strong>not</strong> to:</p>
+            <ul class="bullets">
+                <li>Reverse-engineer, decompile, disassemble, or attempt to extract the source code of the App.</li>
+                <li>Modify, adapt, or create derivative works based on the App.</li>
+                <li>Distribute, sell, sublicense, lease, or rent the App to any third party.</li>
+                <li>Remove, alter, or obscure any copyright, trademark, or proprietary notices.</li>
+                <li>Use the App for any unlawful purpose or in violation of any applicable law.</li>
+                <li>Use automated systems, bots, or scripts to interact with the App.</li>
+            </ul>
+        </section>
+
+        <!-- 5 -->
+        <section id="user-content">
+            <h2><span class="num">05</span> User Content</h2>
+            <h3>5.1 — Your Content</h3>
+            <p>Statifly allows you to save, create, and manage media content on your device. You retain full ownership of any content you create, save, or import using the App. We do not claim any rights over your content.</p>
+
+            <h3>5.2 — Content Responsibility</h3>
+            <p>You are solely responsible for all content you save, create, share, or export using Statifly. You represent and warrant that:</p>
+            <ul class="bullets">
+                <li>You have the necessary rights or permissions to use, save, and share the content.</li>
+                <li>Your use of the content does not infringe any third-party intellectual property, privacy, or other rights.</li>
+                <li>Your content does not violate any applicable laws or regulations.</li>
+            </ul>
+
+            <h3>5.3 — Local Storage</h3>
+            <p>All user content is stored <strong>locally on your device</strong>. We do not upload, access, or store your content on any server. You are responsible for maintaining backups of your content.</p>
+        </section>
+
+        <!-- 6 -->
+        <section id="prohibited">
+            <h2><span class="num">06</span> Prohibited Uses</h2>
+            <p>You agree not to use Statifly to:</p>
+            <ul class="no-list">
+                <li><span class="icon">🚫</span> Save, distribute, or share content that you do not have the right to use.</li>
+                <li><span class="icon">🚫</span> Infringe upon the copyright, trademark, or intellectual property rights of others.</li>
+                <li><span class="icon">🚫</span> Stalk, harass, or harm another individual using saved content.</li>
+                <li><span class="icon">🚫</span> Distribute illegal, obscene, or harmful material.</li>
+                <li><span class="icon">🚫</span> Circumvent any digital rights management or access controls.</li>
+                <li><span class="icon">🚫</span> Engage in any activity that disrupts or interferes with the App's functionality.</li>
+            </ul>
+            <div class="callout red">
+                <span class="callout-icon">⚠️</span>
+                <span>Violation of these prohibitions may result in immediate termination of your right to use the App.</span>
+            </div>
+        </section>
+
+        <!-- 7 -->
+        <section id="whatsapp">
+            <h2><span class="num">07</span> WhatsApp Content &amp; Third-Party IP</h2>
+            <h3>7.1 — No Affiliation</h3>
+            <p>Statifly is an <strong>independent application</strong> and is not affiliated with, endorsed by, or sponsored by WhatsApp LLC, Meta Platforms Inc., or any of their subsidiaries. "WhatsApp" and "WhatsApp Business" are trademarks of WhatsApp LLC.</p>
+
+            <h3>7.2 — Status Content Ownership</h3>
+            <p>WhatsApp status updates are content created and shared by WhatsApp users. The original creators retain all rights to their content. By using Statifly to save statuses, you acknowledge that:</p>
+            <ul class="bullets">
+                <li>You are responsible for ensuring that saving and using such content complies with applicable laws and the content creator's rights.</li>
+                <li>Statifly is a tool — it does not grant you any rights to third-party content.</li>
+                <li>You should respect the privacy and intellectual property of status creators.</li>
+            </ul>
+
+            <h3>7.3 — WhatsApp Terms</h3>
+            <p>Your use of WhatsApp is governed by <a href="https://www.whatsapp.com/legal/terms-of-service" target="_blank" rel="noopener">WhatsApp's Terms of Service</a>. We encourage you to review them. We are not responsible for any violations of WhatsApp's terms resulting from your use of Statifly.</p>
+        </section>
+
+        <!-- 8 -->
+        <section id="third-party">
+            <h2><span class="num">08</span> Third-Party Services</h2>
+            <p>Statifly integrates the following third-party services:</p>
+            <ul class="bullets">
+                <li><strong>Firebase Analytics</strong> — Anonymised usage analytics provided by Google.</li>
+                <li><strong>Firebase Crashlytics</strong> — Anonymised crash reporting provided by Google.</li>
+                <li><strong>Firebase Remote Config</strong> — Feature configuration service provided by Google.</li>
+            </ul>
+            <p>These services are governed by <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google's Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. We are not responsible for the practices of these third-party services.</p>
+
+            <h3>8.1 — Link Preview Resolution</h3>
+            <p>When you share a URL into Statifly (e.g. from Instagram or a browser), the App may fetch Open Graph metadata (title, preview image) from that URL to display a preview. This is a direct connection from your device to the linked website — we do not proxy or log these requests.</p>
+        </section>
+
+        <!-- 9 -->
+        <section id="intellectual-property">
+            <h2><span class="num">09</span> Intellectual Property</h2>
+            <p>The App, including its design, code, user interface, graphics, icons, and branding, is the intellectual property of HFB Studioz and is protected by applicable copyright and trademark laws.</p>
+            <p>The Statifly name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of HFB Studioz. You may not use these marks without our prior written permission.</p>
+        </section>
+
+        <!-- 10 -->
+        <section id="disclaimers">
+            <h2><span class="num">10</span> Disclaimers</h2>
+            <div class="callout amber">
+                <span class="callout-icon">⚖️</span>
+                <span>The App is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis, without warranties of any kind, either express or implied.</span>
+            </div>
+            <p>We disclaim all warranties, including but not limited to:</p>
+            <ul class="bullets">
+                <li><strong>Availability</strong> — We do not guarantee that the App will be uninterrupted, error-free, or available at all times.</li>
+                <li><strong>Compatibility</strong> — WhatsApp may change its file storage structure at any time, which could affect the App's status-saving functionality. We will endeavour to update the App but cannot guarantee immediate compatibility.</li>
+                <li><strong>Data Integrity</strong> — While we take care to ensure your data is handled safely, we are not responsible for data loss due to device failure, OS updates, or other circumstances beyond our control.</li>
+                <li><strong>Backup Encryption</strong> — Backup files are encrypted with device-bound keys. If you reset your device, backups created on the old device may become unrecoverable.</li>
+                <li><strong>Content Accuracy</strong> — We make no guarantees about the accuracy or quality of link previews, Open Graph metadata, or media content fetched from third-party URLs.</li>
+            </ul>
+        </section>
+
+        <!-- 11 -->
+        <section id="limitation">
+            <h2><span class="num">11</span> Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, HFB Studioz shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+            <ul class="bullets">
+                <li>Loss of data, content, or media files.</li>
+                <li>Loss of revenue or profits arising from the use of the App.</li>
+                <li>Damage resulting from unauthorised access to your device or stored content.</li>
+                <li>Any claims arising from third-party content saved, created, or shared using the App.</li>
+                <li>Service interruptions caused by WhatsApp or Android OS changes.</li>
+            </ul>
+            <p>In no event shall our total liability exceed the amount you paid for the App (which is zero, as the App is free).</p>
+        </section>
+
+        <!-- 12 -->
+        <section id="termination">
+            <h2><span class="num">12</span> Termination</h2>
+            <p>You may stop using Statifly at any time by uninstalling the App. Upon uninstallation, all locally stored app data (cache, saved statuses, created statuses, database, and preferences) will be permanently deleted by the Android operating system.</p>
+            <p>We reserve the right to discontinue the App or any of its features at any time, without prior notice or liability.</p>
+            <p>Backup files stored in your Downloads folder will persist after uninstallation and must be manually deleted if desired.</p>
+        </section>
+
+        <!-- 13 -->
+        <section id="changes">
+            <h2><span class="num">13</span> Changes to These Terms</h2>
+            <p>We may update these Terms from time to time. Changes will be reflected by updating the "Last Updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the revised Terms.</p>
+            <p>For material changes, we will endeavour to provide notice through the App or via our Google Play listing.</p>
+        </section>
+
+        <!-- 14 -->
+        <section id="governing-law">
+            <h2><span class="num">14</span> Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of the App shall be subject to the exclusive jurisdiction of the courts in India.</p>
+        </section>
+
+        <!-- 15 -->
+        <section id="contact">
+            <h2><span class="num">15</span> Contact Us</h2>
+            <p>If you have any questions or concerns about these Terms of Service, please contact us:</p>
+            <div class="contact-card">
+                <p style="color: var(--text-muted); margin-bottom: 4px; font-size: 13px;">Developer — HFB Studioz</p>
+                <a href="mailto:hfbstudioz@gmail.com" class="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    hfbstudioz@gmail.com
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>These terms apply to the <strong>Statifly</strong> app available on Google Play.</p>
+        <p style="margin-top: 6px;">© 2026 HFB Studioz. All rights reserved.</p>
+        <p style="margin-top: 8px;"><a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
