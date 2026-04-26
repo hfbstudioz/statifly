@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Statifly</title>
-    <meta name="description" content="Privacy Policy for the Statifly Android app by HFB Studioz. Learn how your data is handled — spoiler: it stays on your device.">
+    <meta name="description" content="Privacy Policy for the Statifly Android app by HFB Studioz. Learn how your data is handled, what analytics we use, and your privacy rights.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -471,8 +471,8 @@
             Privacy Policy
         </div>
         <h1>Statifly</h1>
-        <p>Your data stays on your device. No tracking, no ads, no cloud.</p>
-        <p class="hero-updated">Last updated — March 31, 2026</p>
+        <p>We respect your privacy. No ads, no personal data collection.</p>
+        <p class="hero-updated">Last updated — April 26, 2026</p>
     </header>
 
     <!-- ── Content ─────────────────────────────────────── -->
@@ -503,7 +503,7 @@
             <p>HFB Studioz ("we", "us", or "our") built <strong>Statifly</strong> as a free Android application. This Privacy Policy explains what information the app accesses, how it is used, and how it is stored. By using Statifly, you agree to the practices described in this policy.</p>
             <div class="callout green">
                 <span class="callout-icon">🛡️</span>
-                <span>We are committed to protecting your privacy. <strong>Statifly does not collect, transmit, or share any personal data with us or any third party.</strong></span>
+                <span>We are committed to protecting your privacy. <strong>Statifly does not collect any personally identifiable information. We use anonymised crash reports and usage analytics solely to improve app stability and performance.</strong></span>
             </div>
         </section>
 
@@ -557,12 +557,16 @@
                             <td><code>POST_NOTIFICATIONS</code></td>
                             <td>Show notifications about fetch progress and backup completion (Android 13+). Optional — can be denied.</td>
                         </tr>
+                        <tr>
+                            <td><code>INTERNET</code></td>
+                            <td>Required by Firebase services to send anonymised crash reports, usage analytics, and fetch remote configuration. No personal data is transmitted.</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
             <div class="callout green">
                 <span class="callout-icon">✅</span>
-                <span>Statifly does <strong>NOT</strong> request Internet, Camera, Microphone, Location, Contacts, or any other sensitive permission.</span>
+                <span>Statifly does <strong>NOT</strong> request Camera, Microphone, Location, Contacts, or any other sensitive permission.</span>
             </div>
         </section>
 
@@ -571,13 +575,17 @@
             <h2><span class="num">04</span> Data Collection & Usage</h2>
 
             <h3>4.1 — We Do NOT Collect Personal Data</h3>
-            <p>Statifly operates <strong>entirely offline</strong>. We do not:</p>
+            <p>We do not collect any personally identifiable information. Specifically, we do not:</p>
             <ul class="no-list">
-                <li><span class="icon">❌</span> Collect, store, or transmit any personal information.</li>
-                <li><span class="icon">❌</span> Use analytics, tracking, or telemetry services.</li>
+                <li><span class="icon">❌</span> Collect your name, email address, phone number, or any personal identifiers.</li>
+                <li><span class="icon">❌</span> Track your individual browsing or usage behaviour across apps.</li>
                 <li><span class="icon">❌</span> Display advertisements or include ad SDKs.</li>
-                <li><span class="icon">❌</span> Send any data to remote servers.</li>
+                <li><span class="icon">❌</span> Sell or share any data with third parties for marketing or profiling.</li>
             </ul>
+            <div class="callout amber">
+                <span class="callout-icon">📊</span>
+                <span>Statifly uses Firebase services that collect <strong>anonymised, non-personal</strong> diagnostic and usage data to help us improve app stability and performance. See section 4.5 below for details.</span>
+            </div>
 
             <h3>4.2 — Data Stored Locally on Your Device</h3>
             <p>All data created or managed by Statifly is stored <strong>locally on your device</strong>:</p>
@@ -640,18 +648,57 @@
                 <li>This information is <strong>only sent if you voluntarily submit the email</strong>. It is never collected automatically.</li>
                 <li>We only use the information you provide to address your reported issue.</li>
             </ul>
+
+            <h3>4.5 — Analytics & Crash Reporting</h3>
+            <p>Statifly uses the following <strong>Firebase</strong> services provided by Google:</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Data Collected</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Firebase Analytics</td>
+                            <td>Anonymised usage events (e.g. screen views, feature usage counts), device type, OS version, app version, country (coarse).</td>
+                            <td>Understand which features are used most so we can prioritise improvements.</td>
+                        </tr>
+                        <tr>
+                            <td>Firebase Crashlytics</td>
+                            <td>Crash stack traces, device model, OS version, app state at time of crash, anonymised installation ID.</td>
+                            <td>Detect, diagnose, and fix crashes and stability issues.</td>
+                        </tr>
+                        <tr>
+                            <td>Firebase Remote Config</td>
+                            <td>Anonymised installation ID, app version, OS version.</td>
+                            <td>Deliver feature flags and configuration values without requiring an app update.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="callout green">
+                <span class="callout-icon">🔒</span>
+                <span><strong>Important:</strong> All data collected by Firebase is anonymised and aggregated. It does not include your name, email, phone number, photos, statuses, or any file contents. Google processes this data under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>. You can opt out of Analytics data collection by disabling "Usage & diagnostics" in your Android device settings.</span>
+            </div>
         </section>
 
         <!-- 5. Third-Party Services -->
         <section id="third-party">
             <h2><span class="num">05</span> Third-Party Services</h2>
-            <p>Statifly does <strong>not</strong> integrate any third-party services that collect data:</p>
+            <p>Statifly integrates the following third-party services:</p>
+
+            <h3>Google Firebase</h3>
+            <p>We use <strong>Firebase Analytics</strong>, <strong>Firebase Crashlytics</strong>, and <strong>Firebase Remote Config</strong> — all provided by Google. These services collect anonymised diagnostic and usage data as described in section 4.5. Data is processed by Google under their <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Data Privacy documentation</a>.</p>
+
+            <p>Statifly does <strong>not</strong> integrate:</p>
             <ul class="no-list">
-                <li><span class="icon">❌</span> No analytics or crash reporting SDKs</li>
-                <li><span class="icon">❌</span> No advertising networks</li>
+                <li><span class="icon">❌</span> No advertising networks or ad SDKs</li>
                 <li><span class="icon">❌</span> No social login or authentication services</li>
-                <li><span class="icon">❌</span> No cloud storage services</li>
-                <li><span class="icon">❌</span> No third-party trackers</li>
+                <li><span class="icon">❌</span> No cloud storage or file syncing services</li>
+                <li><span class="icon">❌</span> No third-party trackers or profiling tools</li>
             </ul>
             <p>Open-source libraries (Jetpack Compose, Room, Hilt, Coil, Media3, WorkManager, DataStore) are used solely for on-device functionality and do not transmit data externally.</p>
         </section>
@@ -684,7 +731,8 @@
             <ul class="bullets">
                 <li>Backup archives are encrypted using <strong>AES encryption</strong> with device-bound keys before being saved to external storage.</li>
                 <li>All status files, database entries, and preferences are stored in the app's private internal storage, <strong>sandboxed by Android</strong> and inaccessible to other apps.</li>
-                <li>Statifly does not use the Internet permission and <strong>cannot transmit data off your device</strong>.</li>
+                <li>Network communication is limited to <strong>Firebase services only</strong> (crash reports, anonymised analytics, remote config). No personal data, statuses, or media files are ever transmitted.</li>
+                <li>All Firebase data is transmitted over <strong>encrypted HTTPS connections</strong>.</li>
             </ul>
         </section>
 
